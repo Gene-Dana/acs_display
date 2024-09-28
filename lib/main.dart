@@ -1,4 +1,3 @@
-import 'package:acs_display/app/app.dart';
 import 'package:acs_display/bootstrap.dart';
 import 'package:acs_display/firebase_options.dart';
 import 'package:firestore_todos_api/firestore_todos_api.dart';
@@ -16,20 +15,4 @@ void main() async {
   final todosApi = FirestoreTodosApi(firestore: FirebaseFirestore.instance);
 
   bootstrap(todosApi: todosApi);
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const AppView(),
-    );
-  }
 }

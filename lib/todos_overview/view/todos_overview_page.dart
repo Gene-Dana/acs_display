@@ -27,8 +27,11 @@ class TodosOverviewView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('All Comfort Solutions Display'),
-        actions: const [
-          TodosOverviewOptionsButton(),
+        actions: [
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).push(EditTodoPage.route()),
+            child: const Icon(Icons.add),
+          )
         ],
       ),
       body: MultiBlocListener(
